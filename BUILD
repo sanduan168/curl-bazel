@@ -24,7 +24,9 @@ cc_library(
 	]),
         ":aarch64": glob([
           "aarch64/lib/*.a",
-          "aarch64/lib/*.so*",
+          "aarch64/lib/libgssapi_krb5.so.2.2",
+          "aarch64/lib/libgssapi.so.3.0.0",
+          "aarch64/lib/libgssrpc.so.4.2",
         ]),
         "//conditions:default": [":empty"]
     }),
