@@ -18,8 +18,14 @@ filegroup(
 cc_library(
     name = "all",
     srcs = select({
-        ":k8": glob(["k8/lib/*.a"]),
-        ":aarch64": glob(["aarch64/lib/*.a"]),
+        ":k8": glob([
+	    "k8/lib/*.a",
+	    "k8/lib/*.so*",
+	]),
+        ":aarch64": glob([
+          "aarch64/lib/*.a",
+          "aarch64/lib/*.so*",
+        ]),
         "//conditions:default": [":empty"]
     }),
     hdrs = select({
