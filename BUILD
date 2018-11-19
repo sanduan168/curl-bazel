@@ -23,6 +23,8 @@ cc_library(
 	    "k8/lib/*.so*",
 	]),
         ":aarch64": glob([
+            "aarch64/lib/*.a",
+            "aarch64/lib/*.so*",
         ]),
         "//conditions:default": [":empty"]
     }),
